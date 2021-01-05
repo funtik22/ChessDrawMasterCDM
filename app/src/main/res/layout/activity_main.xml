@@ -10,16 +10,18 @@
         android:id="@+id/Relative" android:background="#BFB3B3">
     <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="96dp" app:srcCompat="@drawable/without"
-            android:id="@+id/imageButton"
+            android:layout_height="96dp"
+            app:srcCompat="@drawable/without"
+            android:id="@+id/ButtonWithOutLogin"
             android:layout_alignParentBottom="true"
-            android:scaleType="centerInside"/>
+            android:scaleType="centerInside"
+            android:onClick="OnClick"/>
     <ImageButton
             android:layout_width="match_parent"
             android:layout_height="96dp"
             app:srcCompat="@drawable/register"
             android:id="@+id/imageButton2"
-            android:layout_above="@+id/imageButton" tools:srcCompat="@drawable/register"
+            android:layout_above="@+id/ButtonWithOutLogin" tools:srcCompat="@drawable/register"
             android:scaleType="centerInside"/>
     <ImageButton
             android:layout_width="match_parent"
