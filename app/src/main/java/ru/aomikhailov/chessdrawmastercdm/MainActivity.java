@@ -13,13 +13,9 @@ public  class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button ButtonStartScreen = (Button) findViewById(R.id.ButtonWithOutLogin);
-        ButtonStartScreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, StartScreenActivity.class);
-                startActivity(intent);
-            }
-        });
+    }
+    public void onClick(View view) {
+        Intent intent = new Intent(MainActivity.this, StartScreenActivity.class);
+        startActivity(intent);
     }
 }
