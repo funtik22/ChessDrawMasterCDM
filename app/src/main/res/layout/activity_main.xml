@@ -15,7 +15,7 @@
             android:id="@+id/ButtonWithOutLogin"
             android:layout_alignParentBottom="true"
             android:scaleType="centerInside"
-            android:onClick="OnClick"/>
+            android:onClick="onClick"/>
     <ImageButton
             android:layout_width="match_parent"
             android:layout_height="96dp"
