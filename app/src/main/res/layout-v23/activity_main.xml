@@ -16,30 +16,28 @@
             android:id="@+id/ButtonWithOutLogin"
             android:layout_alignParentBottom="true"
             android:scaleType="centerInside"
-            />
+            android:onClick="onClick"/>
     <ImageButton
-            android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="96dp"
             app:srcCompat="@drawable/register"
+            android:id="@+id/imageButton2"
             android:layout_above="@+id/ButtonWithOutLogin"
             tools:srcCompat="@drawable/register"
-            android:scaleType="centerInside"
-            />
+            android:scaleType="centerInside"/>
     <ImageButton
             android:layout_width="match_parent"
             android:layout_height="96dp"
-            app:srcCompat="@drawable/login"
-            android:id="@+id/login"
-            android:layout_above="@+id/register"
-            android:scaleType="centerInside"
-            />
+            app:srcCompat="@drawable/voyti"
+            android:id="@+id/imageButton3"
+            android:layout_above="@+id/imageButton2"
+            android:scaleType="centerInside"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:inputType="textPassword"
             android:id="@+id/editTextTextPassword4"
-            android:layout_above="@+id/login"
+            android:layout_above="@+id/imageButton3"
             android:layout_marginBottom="40dp"
             android:textAlignment="center"
             android:textSize="24sp"

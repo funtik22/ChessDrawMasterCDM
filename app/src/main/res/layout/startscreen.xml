@@ -14,7 +14,7 @@
             android:id="@+id/imageButton"
             android:layout_alignParentBottom="true"
             android:scaleType="centerInside"
-            android:layout_marginBottom="41dp"/>
+            android:layout_marginBottom="48dp"/>
     <ImageButton
             android:layout_width="match_parent"
             android:layout_height="96dp"
@@ -22,12 +22,13 @@
             android:id="@+id/imageButton4"
             android:layout_above="@+id/imageButton"
             android:scaleType="centerInside"
-            android:layout_marginBottom="41dp"/>
+            android:layout_marginBottom="24dp"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="96dp"
             app:srcCompat="@drawable/create_tournament"
             android:id="@+id/imageButton5"
-            android:scaleType="centerInside" android:layout_above="@+id/imageButton4"
-            android:layout_marginBottom="41dp"/>
+            android:scaleType="centerInside"
+            android:layout_above="@+id/imageButton4"
+            android:layout_marginBottom="24dp"/>
 </RelativeLayout>
