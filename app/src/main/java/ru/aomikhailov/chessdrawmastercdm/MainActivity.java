@@ -18,9 +18,9 @@ public  class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        WithoutLogin =(ImageButton) findViewById(R.id.ButtonWithOutLogin);
-        Register = (ImageButton) findViewById(R.id.register);
-        Login = (ImageButton) findViewById(R.id.login);
+        WithoutLogin = findViewById(R.id.ButtonWithOutLogin);
+        Register = findViewById(R.id.register);
+        Login =  findViewById(R.id.login);
         WithoutLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
