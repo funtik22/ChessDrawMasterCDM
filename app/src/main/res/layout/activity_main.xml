@@ -16,24 +16,25 @@
             android:id="@+id/ButtonWithOutLogin"
             android:layout_alignParentBottom="true"
             android:scaleType="centerInside"
-            />
+            android:contentDescription="@string/app_name"/>
     <ImageButton
-            android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="96dp"
-            app:srcCompat="@drawable/register"
+            app:srcCompat="@drawable/component_6"
+            android:id="@+id/ButtonRegister"
             android:layout_above="@+id/ButtonWithOutLogin"
-            tools:srcCompat="@drawable/register"
+            android:layout_marginBottom="20dp"
             android:scaleType="centerInside"
-            />
+            android:contentDescription="@string/app_name"/>
     <ImageButton
+            android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="96dp"
             app:srcCompat="@drawable/login"
-            android:id="@+id/login"
-            android:layout_above="@+id/register"
+            android:layout_above="@+id/ButtonRegister"
             android:scaleType="centerInside"
-            />
+            android:contentDescription="@string/app_name"
+            android:layout_marginBottom="20dp"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="62dp"

@@ -1,6 +1,5 @@
 package ru.aomikhailov.chessdrawmastercdm;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
@@ -19,8 +18,8 @@ public  class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         WithoutLogin = findViewById(R.id.ButtonWithOutLogin);
-        Register = findViewById(R.id.register);
-        Login =  findViewById(R.id.login);
+        Register = findViewById(R.id.ButtonRegister);
+
         WithoutLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,6 +27,8 @@ public  class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
