@@ -28,7 +28,6 @@ public  class MainActivity extends AppCompatActivity {
             }
         });
 
-
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
