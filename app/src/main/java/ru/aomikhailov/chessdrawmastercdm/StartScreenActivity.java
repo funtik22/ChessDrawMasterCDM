@@ -1,5 +1,6 @@
 package ru.aomikhailov.chessdrawmastercdm;
 
+import android.view.Window;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 

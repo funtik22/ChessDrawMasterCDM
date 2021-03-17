@@ -6,29 +6,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".StartScreenActivity"
-        android:foreground="@drawable/android10">
-    <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="96dp"
-            app:srcCompat="@drawable/settings"
-            android:id="@+id/imageButton"
-            android:layout_alignParentBottom="true"
-            android:scaleType="centerInside"
-            android:layout_marginBottom="48dp"/>
-    <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="96dp"
-            app:srcCompat="@drawable/open_tournament"
-            android:id="@+id/imageButton4"
-            android:layout_above="@+id/imageButton"
-            android:scaleType="centerInside"
-            android:layout_marginBottom="24dp"/>
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="96dp"
-            app:srcCompat="@drawable/create_tournament"
-            android:id="@+id/imageButton5"
-            android:scaleType="centerInside"
-            android:layout_above="@+id/imageButton4"
-            android:layout_marginBottom="24dp"/>
-</RelativeLayout>
+        android:foreground="@drawable/startscreen"/>
