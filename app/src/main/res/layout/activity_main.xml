@@ -6,60 +6,37 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
-        android:foreground="@drawable/foreground"
         android:id="@+id/RelativeLayout"
-        android:background="#BFB3B3">
-    <ImageButton
+        android:background="@drawable/loginscreen1">
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="96dp"
-            app:srcCompat="@drawable/withoutlogin"
-            android:id="@+id/ButtonWithOutLogin"
-            android:layout_alignParentBottom="true"
-            android:scaleType="centerInside"
-            android:contentDescription="@string/app_name"
-            android:layout_marginBottom="0dp"/>
-    <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="96dp"
-            app:srcCompat="@drawable/register"
-            android:id="@+id/ButtonRegister"
-            android:layout_above="@+id/ButtonWithOutLogin"
-            android:layout_marginBottom="20dp"
-            android:scaleType="centerInside"
-            android:contentDescription="@string/app_name"/>
-    <ImageButton
-            android:id="@+id/login"
-            android:layout_width="match_parent"
-            android:layout_height="96dp"
-            app:srcCompat="@drawable/login1"
-            android:layout_above="@+id/ButtonRegister"
-            android:scaleType="centerInside"
-            android:contentDescription="@string/app_name"
-            android:layout_marginBottom="20dp"/>
-    <EditText
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:inputType="textPassword"
-            android:id="@+id/editTextTextPassword4"
-            android:layout_above="@+id/login"
-            android:layout_marginBottom="40dp"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:selectAllOnFocus="true"
-            android:textStyle="bold"
-            android:hint="пароль"/>
-    <EditText
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:id="@+id/editTextTextEmailAddress"
-            android:layout_above="@+id/editTextTextPassword4"
-            android:layout_marginBottom="40dp"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:selectAllOnFocus="true"
-            android:hint="логин"/>
+            android:layout_height="match_parent">
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="50"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="50">
+            <ImageButton
+                    android:layout_width="277dp"
+                    android:layout_height="48dp" app:srcCompat="@drawable/loginbutton"
+                    android:layout_gravity="center" android:id="@+id/ButtonLogin"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"/>
+            <ImageButton
+                    android:layout_width="277dp"
+                    android:layout_height="48dp" app:srcCompat="@drawable/buttonregister"
+                    android:layout_gravity="center" android:id="@+id/ButtonRegister"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"/>
+            <ImageButton
+                    android:layout_width="277dp"
+                    android:layout_height="48dp" app:srcCompat="@drawable/buttonwithoutlogin"
+                    android:layout_gravity="center" android:id="@+id/ButtonWithOutLogin"/>
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

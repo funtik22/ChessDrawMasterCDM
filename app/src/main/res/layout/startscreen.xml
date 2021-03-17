@@ -6,4 +6,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".StartScreenActivity"
-        android:foreground="@drawable/startscreen"/>
+        android:background="@drawable/startscreen" android:id="@+id/ButtonWithOutLogin">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="40"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="60">
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"/>
+            <ImageButton
+                    android:layout_width="289dp"
+                    android:layout_height="53dp" app:srcCompat="@drawable/buttoncreatetournament"
+                    android:id="@+id/ButtonCreateTournament" android:layout_gravity="center"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"/>
+            <ImageButton
+                    android:layout_width="289dp"
+                    android:layout_height="53dp" app:srcCompat="@drawable/opentournament"
+                    android:id="@+id/ButtonOpenTournament" android:layout_gravity="center"
+            />
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"/>
+            <ImageButton
+                    android:layout_width="289dp"
+                    android:layout_height="53dp" app:srcCompat="@drawable/settings"
+                    android:id="@+id/ButtonSettings" android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
