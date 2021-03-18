@@ -14,29 +14,61 @@
             android:layout_height="match_parent">
         <Space
                 android:layout_width="match_parent"
-                android:layout_height="0dp" android:layout_weight="50"/>
+                android:layout_height="0dp"
+                android:layout_weight="20"/>
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="0dp" android:layout_weight="50">
-            <ImageButton
-                    android:layout_width="277dp"
-                    android:layout_height="48dp" app:srcCompat="@drawable/loginbutton"
-                    android:layout_gravity="center" android:id="@+id/ButtonLogin"/>
+                android:layout_height="0dp"
+                android:layout_weight="80">
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/EditTextLogin"
+                    android:hint="Логин"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/EditTextPassword"
+                    android:hint="Пароль"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
             <Space
                     android:layout_width="match_parent"
                     android:layout_height="60dp"/>
             <ImageButton
                     android:layout_width="277dp"
-                    android:layout_height="48dp" app:srcCompat="@drawable/buttonregister"
-                    android:layout_gravity="center" android:id="@+id/ButtonRegister"/>
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/loginbutton"
+                    android:layout_gravity="center"
+                    android:id="@+id/ButtonLogin"/>
             <Space
                     android:layout_width="match_parent"
                     android:layout_height="60dp"/>
             <ImageButton
                     android:layout_width="277dp"
-                    android:layout_height="48dp" app:srcCompat="@drawable/buttonwithoutlogin"
-                    android:layout_gravity="center" android:id="@+id/ButtonWithOutLogin"/>
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/buttonregister"
+                    android:layout_gravity="center"
+                    android:id="@+id/ButtonRegister"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"/>
+            <ImageButton
+                    android:layout_width="277dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/buttonwithoutlogin"
+                    android:layout_gravity="center"
+                    android:id="@+id/ButtonWithOutLogin"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

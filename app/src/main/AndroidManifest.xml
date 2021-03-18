@@ -10,17 +10,22 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+        android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity">
-
+        <activity android:name=".RegisterActivity"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".StartScreenActivity">
+        <activity android:name=".StartScreenActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".CreateTournamentActivity"
+                  android:screenOrientation="portrait">
         </activity>
 
     </application>
