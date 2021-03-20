@@ -1,8 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".RegisterActivity">
+        tools:context=".RegisterActivity" android:background="@drawable/registeractivity">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="15"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="85">
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Name"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPersonName"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/editTextTextEmailAddress"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPassword"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPassword2"/>
+            <ImageButton
+                    android:layout_width="304dp"
+                    android:layout_height="43dp" app:srcCompat="@drawable/buttonzaregister1"
+                    android:id="@+id/imageButton"/>
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
