@@ -1,53 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".RegisterActivity" android:background="@drawable/registeractivity">
+        tools:context=".RegisterActivity"
+        android:background="@drawable/registeractivity">
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <Space
                 android:layout_width="match_parent"
-                android:layout_height="0dp" android:layout_weight="15"/>
+                android:layout_height="0dp"
+                android:layout_weight="15"/>
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="0dp" android:layout_weight="85">
+                android:layout_height="0dp"
+                android:layout_weight="85">
             <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:text="Name"
                     android:ems="10"
-                    android:id="@+id/editTextTextPersonName"/>
+                    android:id="@+id/editTextLogin"
+                    android:layout_gravity="center" android:gravity="center"
+                    android:hint="Логин"/>
             <Space
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="20dp"/>
             <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:ems="10"
-                    android:id="@+id/editTextTextEmailAddress"/>
-            <EditText
+                    android:id="@+id/editTextEmailAddress"
+                    android:gravity="center" android:layout_gravity="center"
+                    android:hint="e-mail адрес"/>
+            <Space
                     android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+            <EditText
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:ems="10"
-                    android:id="@+id/editTextTextPassword"/>
-            <EditText
+                    android:id="@+id/editTextPassword"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:hint="Пароль"/>
+            <Space
                     android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+            <EditText
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:ems="10"
-                    android:id="@+id/editTextTextPassword2"/>
+                    android:id="@+id/editTextTextPassword2"
+                    android:hint="Пароль (ещё раз)"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
             <ImageButton
-                    android:layout_width="304dp"
-                    android:layout_height="43dp" app:srcCompat="@drawable/buttonzaregister1"
-                    android:id="@+id/imageButton"/>
+                    android:layout_width="315dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/buttonzaregister1"
+                    android:id="@+id/ButtonZaRegister"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

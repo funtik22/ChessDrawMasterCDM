@@ -6,6 +6,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".CreateTournamentActivity"
-        android:id="@+id/RelativeLayout">
+        android:id="@+id/RelativeLayout"
+        android:background="@drawable/createtournament">
 
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:text="Турнир"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:gravity="center"
+                android:foregroundGravity="center"
+                android:layout_gravity="center"
+                android:textSize="48sp"
+                android:textColor="#000000"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_weight="1"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/button_create"
+                    android:id="@+id/MenuButton"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
