@@ -4,13 +4,15 @@
     <group android:id="@+id/menugroup1" >
         <item
                 android:id="@+id/menu1"
-                android:title="Нокаут система"/>
+                android:title="1"/>
         <item
                 android:id="@+id/menu2"
-                android:title="Швейцарская система"/>
+                android:title="2"/>
         <item
                 android:id="@+id/menu3"
-                android:title="Круговая система">
+                android:title="3">
         </item>
+
+
     </group>
 </menu>

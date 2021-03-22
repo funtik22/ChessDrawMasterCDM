@@ -11,11 +11,12 @@ import androidx.appcompat.app.AppCompatActivity;
 public class CreateTournamentActivity extends AppCompatActivity {
 
     Button MenuButton;
+    Button NumberOfPlayer;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_tournament);
-
+        NumberOfPlayer = findViewById(R.id.NumberOfPlayer);
         MenuButton = findViewById(R.id.Menubutton);
         MenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,7 +24,21 @@ public class CreateTournamentActivity extends AppCompatActivity {
                 showPopupMenu(v);
             }
         });
+        NumberOfPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CreatePopupMenu(v);
+            }
+        });
     }
+    private void CreatePopupMenu(View v) {
+        PopupMenu popupMenu = new PopupMenu(this, v);
+        for (Integer i = 1; i < 100; i++) {
+            popupMenu.getMenu().add(1, R.id.menu1+i, i, i.toString());
+        }
+        popupMenu.show();
+    }
+
             private void showPopupMenu(View v) {
                 PopupMenu popupMenu = new PopupMenu(this, v);
                 popupMenu.inflate(R.menu.populmenu);
@@ -56,7 +71,9 @@ public class CreateTournamentActivity extends AppCompatActivity {
                             }
                         });
                 popupMenu.show();
+
             }
+
         }
 
 
