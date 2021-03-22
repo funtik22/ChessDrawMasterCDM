@@ -26,19 +26,23 @@
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
             <TextView
-                    android:text="TextView"
+                    android:text="Тип турнира"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2"
-                    android:layout_weight="1"/>
-            <ImageButton
+                    android:layout_weight="1" android:textSize="36sp" android:textAlignment="center"
+                    android:textColor="#000000" android:gravity="center" android:layout_gravity="center"/>
+            <Button
+                    android:text="Швейцарская"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/button_create"
-                    android:id="@+id/MenuButton"
-                    android:layout_weight="1"/>
+                    android:layout_height="wrap_content" android:id="@+id/Menubutton" android:layout_weight="1"
+                    android:background="@drawable/buttontypeoftournament" android:layout_gravity="center"/>
         </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
     </LinearLayout>
 </RelativeLayout>

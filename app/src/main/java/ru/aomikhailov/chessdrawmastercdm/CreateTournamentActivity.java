@@ -3,20 +3,20 @@ package ru.aomikhailov.chessdrawmastercdm;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CreateTournamentActivity extends AppCompatActivity {
 
-    ImageButton MenuButton;
+    Button MenuButton;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_tournament);
 
-        MenuButton = findViewById(R.id.MenuButton);
+        MenuButton = findViewById(R.id.Menubutton);
         MenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,32 +34,27 @@ public class CreateTournamentActivity extends AppCompatActivity {
                                 switch (item.getItemId()) {
                                     case R.id.menu1:
                                         Toast.makeText(getApplicationContext(),
-                                                "Вы выбрали PopupMenu 1",
+                                                "Вы выбрали Нокаут систему",
                                                 Toast.LENGTH_SHORT).show();
+                                        MenuButton.setText("Нокаут");
                                         return true;
                                     case R.id.menu2:
                                         Toast.makeText(getApplicationContext(),
-                                                "Вы выбрали PopupMenu 2",
+                                                "Вы выбрали Швейцарскую систему",
                                                 Toast.LENGTH_SHORT).show();
+                                        MenuButton.setText("Швейцарская");
                                         return true;
                                     case R.id.menu3:
                                         Toast.makeText(getApplicationContext(),
-                                                "Вы выбрали PopupMenu 3",
+                                                "Вы выбрали Круговую систему",
                                                 Toast.LENGTH_SHORT).show();
+                                        MenuButton.setText("Круговая");
                                         return true;
                                     default:
                                         return false;
                                 }
                             }
                         });
-
-                popupMenu.setOnDismissListener(new PopupMenu.OnDismissListener() {
-                    @Override
-                    public void onDismiss(PopupMenu menu) {
-                        Toast.makeText(getApplicationContext(), "onDismiss",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
                 popupMenu.show();
             }
         }
