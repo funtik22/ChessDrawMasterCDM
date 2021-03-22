@@ -21,25 +21,36 @@ public class CreateTournamentActivity extends AppCompatActivity {
         MenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showPopupMenu(v);
+                showPopupMenuWithTypeOfTournament(v);
             }
         });
         NumberOfPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CreatePopupMenu(v);
+                showPopupMenuWithNumberOfPlayer(v);
             }
         });
     }
-    private void CreatePopupMenu(View v) {
+    private void showPopupMenuWithNumberOfPlayer(View v) {
         PopupMenu popupMenu = new PopupMenu(this, v);
         for (Integer i = 1; i < 100; i++) {
             popupMenu.getMenu().add(1, R.id.menu1+i, i, i.toString());
         }
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                for(Integer i = 1; i< 100; i++){
+                    if(item.getItemId() == R.id.menu1+i){
+                        NumberOfPlayer.setText(i.toString());
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
         popupMenu.show();
     }
-
-            private void showPopupMenu(View v) {
+            private void showPopupMenuWithTypeOfTournament(View v) {
                 PopupMenu popupMenu = new PopupMenu(this, v);
                 popupMenu.inflate(R.menu.populmenu);
 
@@ -73,7 +84,6 @@ public class CreateTournamentActivity extends AppCompatActivity {
                 popupMenu.show();
 
             }
-
         }
 
 
