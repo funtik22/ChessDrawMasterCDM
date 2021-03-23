@@ -69,7 +69,7 @@
             <ImageButton
                     android:layout_width="315dp"
                     android:layout_height="50dp"
-                    app:srcCompat="@drawable/buttonzaregister1"
+                    app:srcCompat="@drawable/zaregisterbutton"
                     android:id="@+id/ButtonZaRegister"
                     android:layout_gravity="center"
                     android:foregroundGravity="center"/>

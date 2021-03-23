@@ -48,7 +48,7 @@
             <ImageButton
                     android:layout_width="277dp"
                     android:layout_height="48dp"
-                    app:srcCompat="@drawable/loginbutton"
+                    app:srcCompat="@drawable/buttonlogin"
                     android:layout_gravity="center"
                     android:id="@+id/ButtonLogin"/>
             <Space
