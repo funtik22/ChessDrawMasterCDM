@@ -2,8 +2,6 @@ package ru.aomikhailov.chessdrawmastercdm;
 
 import android.content.Intent;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

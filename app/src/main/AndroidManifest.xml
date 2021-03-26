@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="ru.aomikhailov.chessdrawmastercdm">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="ru.aomikhailov.chessdrawmastercdm">
 
     <application
             android:allowBackup="true"
@@ -25,6 +26,9 @@
                   android:screenOrientation="portrait">
         </activity>
         <activity android:name=".CreateTournamentActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".EnteringPlayersActivity"
                   android:screenOrientation="portrait">
         </activity>
 
