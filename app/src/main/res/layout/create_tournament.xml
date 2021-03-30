@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <TextView
-                android:text="Турнир"
+                android:text="@string/Tournament"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <TextView
-                    android:text="Тип турнира"
+                    android:text="@string/TypeOfTournament"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2"
@@ -42,7 +42,7 @@
                     android:gravity="center"
                     android:layout_gravity="center"/>
             <Button
-                    android:text="Швейцарская"
+                    android:text="@string/SwissSystem"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/Menubutton"
@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <TextView
-                    android:text="Количество игроков"
+                    android:text="@string/NomberOfPlayers"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView3"
@@ -83,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <TextView
-                    android:text="Количество туров"
+                    android:text="@string/NumberOfTours"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView4"

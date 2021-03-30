@@ -27,7 +27,7 @@
                     android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/EditTextLogin"
-                    android:hint="Логин"
+                    android:hint="@string/login"
                     android:layout_gravity="center"
                     android:gravity="center"/>
             <Space
@@ -39,7 +39,7 @@
                     android:inputType="textPassword"
                     android:ems="10"
                     android:id="@+id/EditTextPassword"
-                    android:hint="Пароль"
+                    android:hint="@string/password"
                     android:layout_gravity="center"
                     android:gravity="center"/>
             <Space

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">ChessDrawMaster(CDM)</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="Tournament">Турнир</string>
+    <string name="TypeOfTournament">Тип турнира</string>
+    <string name="SwissSystem">Швейцарская</string>
+    <string name="NomberOfPlayers">Количество игроков</string>
+    <string name="NumberOfTours">Количество туров</string>
+    <string name="EnteringPlayers">Ввод играков</string>
+    <string name="e_mail">e-mail адрес</string>
+    <string name="PasswordAgain">Пароль (ещё раз)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

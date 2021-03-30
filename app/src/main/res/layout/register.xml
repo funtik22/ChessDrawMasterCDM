@@ -27,7 +27,7 @@
                     android:ems="10"
                     android:id="@+id/editTextLogin"
                     android:layout_gravity="center" android:gravity="center"
-                    android:hint="Логин"/>
+                    android:hint="@string/login"/>
             <Space
                     android:layout_width="match_parent"
                     android:layout_height="20dp"/>
@@ -38,7 +38,7 @@
                     android:ems="10"
                     android:id="@+id/editTextEmailAddress"
                     android:gravity="center" android:layout_gravity="center"
-                    android:hint="e-mail адрес"/>
+                    android:hint="@string/e_mail"/>
             <Space
                     android:layout_width="match_parent"
                     android:layout_height="20dp"/>
@@ -50,7 +50,7 @@
                     android:id="@+id/editTextPassword"
                     android:gravity="center"
                     android:layout_gravity="center"
-                    android:hint="Пароль"/>
+                    android:hint="@string/password"/>
             <Space
                     android:layout_width="match_parent"
                     android:layout_height="20dp"/>
@@ -60,7 +60,7 @@
                     android:inputType="textPassword"
                     android:ems="10"
                     android:id="@+id/editTextTextPassword2"
-                    android:hint="Пароль (ещё раз)"
+                    android:hint="@string/PasswordAgain"
                     android:gravity="center"
                     android:layout_gravity="center"/>
             <Space
