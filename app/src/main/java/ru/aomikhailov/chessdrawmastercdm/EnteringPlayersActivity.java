@@ -1,24 +1,25 @@
 package ru.aomikhailov.chessdrawmastercdm;
 
 import android.content.Intent;
+import android.net.sip.SipSession;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ListView;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 
-public class EnteringPlayersActivity extends AppCompatActivity {
+public class EnteringPlayersActivity extends AppCompatActivity implements DialogAddPlayers.OnAsw {
 
     ImageButton ButtonCreateTournament1;
     ListView ListPlayers;
     ImageButton AddPlayers;
     EditText PlayersName;
+    TextView wdaawd;
 
      public ArrayList <Player> plList = new ArrayList<>();
 
@@ -29,6 +30,7 @@ public class EnteringPlayersActivity extends AppCompatActivity {
         ListPlayers = findViewById(R.id.ListPlayers);
         AddPlayers = findViewById(R.id.ButtonAdd);
         PlayersName = findViewById(R.id.editTextPlayerName);
+        wdaawd = findViewById(R.id.textView7);
 
 
 
@@ -50,10 +52,19 @@ public class EnteringPlayersActivity extends AppCompatActivity {
         AddPlayers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 DialogAddPlayers dialog = new DialogAddPlayers();
                 dialog.show(getSupportFragmentManager(), "custom");
+
+
+
             }
         });
+    }
+
+    @Override
+    public void OnAsw(String name) {
+        wdaawd.setText(name);
     }
 
     //Player pl = new Player(PlayersName.getText().toString(), "","",234,234,324f,false);
