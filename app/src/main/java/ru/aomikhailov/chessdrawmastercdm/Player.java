@@ -8,10 +8,10 @@ public class Player {
     private Integer YearOfBirth;
     private Integer rating;
     private Float points;
-    private Boolean male;
+    private String male;
 
     public Player(String name, String surname, String patronymic, Integer YearOfBirth,
-                  Integer rating, Float points, Boolean male) {
+                  Integer rating, Float points, String male) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;

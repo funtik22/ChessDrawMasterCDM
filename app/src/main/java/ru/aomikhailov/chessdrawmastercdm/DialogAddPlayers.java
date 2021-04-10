@@ -47,6 +47,10 @@ public class DialogAddPlayers extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         EditText nameText = getDialog().findViewById(R.id.editTextPlayerName);
+                        EditText surnameText = getDialog().findViewById(R.id.editTextPlayerSurname);
+                        EditText patronymicText = getDialog().findViewById(R.id.editTextPlayerPatronymic);
+                        EditText YearOfBirthText = getDialog().findViewById(R.id.editTextAgeOfBirth);
+
                         mListener.OnAsw(nameText.getText().toString());
                     }
                 })
