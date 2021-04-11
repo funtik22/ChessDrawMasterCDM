@@ -3,6 +3,7 @@ package ru.aomikhailov.chessdrawmastercdm;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,13 +25,13 @@ public class DataBasePlayersManager {
         db = dbPlayers.getWritableDatabase();
     }
 
-    public void insertToDb(String name, String surname, String patronymic, Integer YearOfBirth, String male){
+    public void insertToDb(String name, String surname, String patronymic, Integer YearOfBirth){
         ContentValues cv = new ContentValues();
         cv.put("name", name);
         cv.put("surname", surname);
         cv.put("patronymic", patronymic);
-        cv.put("YearOfBirth", YearOfBirth);
-      //  cv.put("male", male);
+         cv.put("YearOfBirth", YearOfBirth);
+       // cv.put("male", male);
         db.insert("playerstable", null, cv);
     }
 
@@ -44,6 +45,17 @@ public class DataBasePlayersManager {
         cursor.close();
         return names;
     }
+
+    public int NumEntries(){
+        Cursor cursor = db.query("playerstable", null, null, null, null, null, null);
+        int k = 0;
+        while (cursor.moveToNext()){
+            k++;
+        }
+        return k;
+    }
+
+
     public void closeDb(){
         dbPlayers.close();
     }

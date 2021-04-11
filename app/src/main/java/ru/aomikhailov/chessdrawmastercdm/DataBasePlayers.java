@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
 
 public class DataBasePlayers extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "databaseplayers.db";
+    private static final String DATABASE_NAME = "databaseplayers5.db";
     private static final int DATABASE_VERSION = 1;
     private static final String TABLE_NAME = "playerstable";
 
@@ -36,7 +36,7 @@ public class DataBasePlayers extends SQLiteOpenHelper {
                 COLUMN_NAME+ " TEXT, " +
                 COLUMN_SURNAME + " TEXT, " +
                 COLUMN_PATRONYMIC + " TEXT,"+
-                COLUMN_YEAR_OF_BIRTH + " TEXT,"+
+                COLUMN_YEAR_OF_BIRTH + " INT,"+
                 COLUMN_MALE+" INT);";
         db.execSQL(query);
     }

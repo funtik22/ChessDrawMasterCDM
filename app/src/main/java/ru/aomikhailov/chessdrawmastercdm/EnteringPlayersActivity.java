@@ -1,14 +1,13 @@
 package ru.aomikhailov.chessdrawmastercdm;
 
-
 import android.content.Intent;
+import android.database.DatabaseUtils;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
-
-
 
 public class EnteringPlayersActivity extends AppCompatActivity implements DialogAddPlayers.OnAsw {
 
@@ -18,7 +17,10 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
     EditText PlayersName;
     TextView wdaawd;
     DataBasePlayersManager myDbManager;
-     public ArrayList <Player> plList = new ArrayList<>();
+    String [] players ;
+    ArrayList<String> arrayList = new ArrayList<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +32,11 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
         AddPlayers = findViewById(R.id.ButtonAdd);
         PlayersName = findViewById(R.id.editTextPlayerName);
         wdaawd = findViewById(R.id.textView7);
+        myDbManager = new DataBasePlayersManager(this);
 
-        ArrayAdapter <Player> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, plList);
-        ListPlayers.setAdapter(adapter);
+
+       // ArrayAdapter <String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, players);
+
 
         ButtonCreateTournament1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +62,27 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
     }
 
     @Override
-    public void OnAsw(String name) {
+    public void OnAsw(String name, String surname, String patronymic, Integer YearOfBirth) {
+        myDbManager.openDb();
+        myDbManager.insertToDb(name, surname, patronymic, YearOfBirth);
+        if(myDbManager.NumEntries() == 0){
+            players = new String[1];
+        }
+        else{
+            players = new String[myDbManager.NumEntries()];
+        }
+        int i = 0;
+        for(String names : myDbManager.getFromDb()){
+           players[i] = names;
+           i++;
+        }
+        ArrayAdapter <String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, players);
+        ListPlayers.setAdapter(adapter);
 
+    }
+
+    public  void OnDestroy(){
+        super.onDestroy();
+        myDbManager.closeDb();
     }
 }

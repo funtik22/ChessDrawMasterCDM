@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editTextTextPersonName7" android:hint="Рейтинг" android:gravity="center"/>
+                android:id="@+id/editTextRating" android:hint="Рейтинг" android:gravity="center"/>
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"

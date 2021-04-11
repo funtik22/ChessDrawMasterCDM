@@ -10,13 +10,13 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
-
+import java.util.Objects;
 
 
 public class DialogAddPlayers extends DialogFragment {
 
     public interface  OnAsw{
-        public void OnAsw(String name);
+        public void OnAsw(String name, String surname, String patronymic, Integer YearOfBirth);
         }
         OnAsw mListener;
 
@@ -38,7 +38,7 @@ public class DialogAddPlayers extends DialogFragment {
 
 
         final AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
-        LayoutInflater inflater = getActivity().getLayoutInflater();
+        LayoutInflater inflater = Objects.requireNonNull(getActivity()).getLayoutInflater();
         return builder
                 .setTitle("Ввод игроков")
                 .setIcon(android.R.drawable.ic_dialog_alert)
@@ -46,12 +46,13 @@ public class DialogAddPlayers extends DialogFragment {
                 .setPositiveButton("Добавить", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        EditText nameText = getDialog().findViewById(R.id.editTextPlayerName);
-                        EditText surnameText = getDialog().findViewById(R.id.editTextPlayerSurname);
-                        EditText patronymicText = getDialog().findViewById(R.id.editTextPlayerPatronymic);
-                        EditText YearOfBirthText = getDialog().findViewById(R.id.editTextAgeOfBirth);
-
-                        mListener.OnAsw(nameText.getText().toString());
+                        EditText nameText = Objects.requireNonNull(getDialog()).findViewById(R.id.editTextPlayerName);
+                        EditText surnameText = Objects.requireNonNull(getDialog()).findViewById(R.id.editTextPlayerSurname);
+                        EditText patronymicText = Objects.requireNonNull(getDialog()).findViewById(R.id.editTextPlayerPatronymic);
+                        EditText YearOfBirthText = Objects.requireNonNull(getDialog()).findViewById(R.id.editTextAgeOfBirth);
+                        EditText RatingText = Objects.requireNonNull(getDialog()).findViewById(R.id.editTextRating);
+                        mListener.OnAsw(nameText.getText().toString(), surnameText.getText().toString(), patronymicText.getText().toString(),
+                                Integer.parseInt(YearOfBirthText.getText().toString()));
                     }
                 })
                 .setNegativeButton("Отмена", null)
