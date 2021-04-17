@@ -31,7 +31,6 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
         ListPlayers = findViewById(R.id.ListPlayers);
         AddPlayers = findViewById(R.id.ButtonAdd);
         PlayersName = findViewById(R.id.editTextPlayerName);
-        wdaawd = findViewById(R.id.textView7);
         myDbManager = new DataBasePlayersManager(this);
 
 
@@ -54,6 +53,22 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
                 dialog.show(getSupportFragmentManager(), "custom");
             }
         });
+        myDbManager.openDb();
+        if(myDbManager.NumEntries() == 0){
+
+        }
+        else {
+            players = new String[myDbManager.NumEntries()];
+
+            int i = 0;
+            for (String names : myDbManager.getFromDb()) {
+                players[i] = names;
+                i++;
+            }
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, players);
+            ListPlayers.setAdapter(adapter);
+            myDbManager.closeDb();
+        }
     }
 
     protected void OnResume(){
@@ -65,6 +80,17 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
     public void OnAsw(String name, String surname, String patronymic, Integer YearOfBirth) {
         myDbManager.openDb();
         myDbManager.insertToDb(name, surname, patronymic, YearOfBirth);
+        CreateAdapter();
+        myDbManager.closeDb();
+
+    }
+
+    public  void OnDestroy(){
+        super.onDestroy();
+        myDbManager.closeDb();
+    }
+
+    public void CreateAdapter(){
         if(myDbManager.NumEntries() == 0){
             players = new String[1];
         }
@@ -73,16 +99,10 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
         }
         int i = 0;
         for(String names : myDbManager.getFromDb()){
-           players[i] = names;
-           i++;
+            players[i] = names;
+            i++;
         }
-        ArrayAdapter <String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, players);
+        ArrayAdapter <String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, players);
         ListPlayers.setAdapter(adapter);
-
-    }
-
-    public  void OnDestroy(){
-        super.onDestroy();
-        myDbManager.closeDb();
     }
 }

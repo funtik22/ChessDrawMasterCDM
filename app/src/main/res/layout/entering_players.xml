@@ -18,13 +18,11 @@
                 android:textColor="#000000"
                 android:textAlignment="center"
                 android:layout_gravity="center"/>
-        <TextView
-                android:text="TextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView7"/>
         <ListView
                 android:layout_width="match_parent"
-                android:layout_height="350dp" android:id="@+id/ListPlayers"/>
+                android:layout_height="350dp"
+                android:choiceMode="multipleChoice"
+                android:id="@+id/ListPlayers"/>
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
