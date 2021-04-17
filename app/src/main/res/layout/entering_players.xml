@@ -23,6 +23,13 @@
                 android:layout_height="350dp"
                 android:choiceMode="multipleChoice"
                 android:id="@+id/ListPlayers"/>
+        <TextView
+                android:id="@+id/empty_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:text="emptyList" >
+        </TextView>
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -43,7 +50,7 @@
                     android:layout_width="177dp"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/buttondelete"
-                    android:id="@+id/imageButton"
+                    android:id="@+id/DeletePlayer"
                     android:layout_weight="0"
                     android:layout_gravity="center"/>
         </LinearLayout>

@@ -9,9 +9,9 @@ public class DataBasePlayers extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "databaseplayers5.db";
     private static final int DATABASE_VERSION = 1;
-    private static final String TABLE_NAME = "playerstable";
+    public static final String TABLE_NAME = "playerstable";
 
-    private static final String COLUMN_ID = "id";
+    public static final String COLUMN_ID = "id";
     private static final String COLUMN_NAME = "name";
     private static final String COLUMN_SURNAME = "surname";
     private static final String COLUMN_PATRONYMIC = "patronymic";

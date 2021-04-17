@@ -11,14 +11,14 @@ public class Player {
     private String male;
 
     public Player(String name, String surname, String patronymic, Integer YearOfBirth,
-                  Integer rating, Float points, String male) {
+                  Integer rating) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
         this.YearOfBirth = YearOfBirth;
         this.rating = rating;
-        this.points = points;
-        this.male = male;
+
+
     }
 
     public String getName() {

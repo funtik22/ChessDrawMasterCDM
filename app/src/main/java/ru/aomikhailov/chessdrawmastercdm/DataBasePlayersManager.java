@@ -55,6 +55,10 @@ public class DataBasePlayersManager {
         return k;
     }
 
+    public void delete(String name){
+        db.delete("playerstable", "name" + " = ?", new String[] { String.valueOf(name) });
+    }
+
 
     public void closeDb(){
         dbPlayers.close();
