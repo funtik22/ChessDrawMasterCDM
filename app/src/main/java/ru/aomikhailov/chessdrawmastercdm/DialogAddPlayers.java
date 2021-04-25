@@ -16,7 +16,7 @@ import java.util.Objects;
 public class DialogAddPlayers extends DialogFragment {
 
     public interface  OnAsw{
-        public void OnAsw(String name, String surname, String patronymic, Integer YearOfBirth);
+        public void OnAsw(String name, String surname, String patronymic, Integer YearOfBirth, Integer Rating);
         }
         OnAsw mListener;
 
@@ -52,7 +52,7 @@ public class DialogAddPlayers extends DialogFragment {
                         EditText YearOfBirthText = Objects.requireNonNull(getDialog()).findViewById(R.id.editTextAgeOfBirth);
                         EditText RatingText = Objects.requireNonNull(getDialog()).findViewById(R.id.editTextRating);
                         mListener.OnAsw(nameText.getText().toString(), surnameText.getText().toString(), patronymicText.getText().toString(),
-                                Integer.parseInt(YearOfBirthText.getText().toString()));
+                                Integer.parseInt(YearOfBirthText.getText().toString()), Integer.parseInt(RatingText.getText().toString()));
                     }
                 })
                 .setNegativeButton("Отмена", null)

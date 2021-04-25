@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -25,13 +26,13 @@ public class DataBasePlayersManager {
         db = dbPlayers.getWritableDatabase();
     }
 
-    public void insertToDb(String name, String surname, String patronymic, Integer YearOfBirth){
+    public void insertToDb(String name, String surname, String patronymic, Integer YearOfBirth, Integer rating){
         ContentValues cv = new ContentValues();
         cv.put("name", name);
         cv.put("surname", surname);
         cv.put("patronymic", patronymic);
          cv.put("YearOfBirth", YearOfBirth);
-       // cv.put("male", male);
+        cv.put("rating", rating);
         db.insert("playerstable", null, cv);
     }
 
@@ -44,6 +45,24 @@ public class DataBasePlayersManager {
         }
         cursor.close();
         return names;
+    }
+    public List<Player> getFromDbPlayers(ArrayList <String> PlayerToAddOrDelete){
+        List<Player> players = new ArrayList<>();
+        Cursor cursor = db.query("playerstable", null, null, null, null, null, null);
+        while (cursor.moveToNext()){
+            String name = cursor.getString(cursor.getColumnIndex("name"));
+            String surname = cursor.getString(cursor.getColumnIndex("surname"));
+            String patronymic = cursor.getString(cursor.getColumnIndex("patronymic"));
+            Integer YearOfBirth = cursor.getInt(cursor.getColumnIndex("YearOfBirth"));
+            Integer rating = cursor.getInt(cursor.getColumnIndex("rating"));
+
+            if(Collections.binarySearch(PlayerToAddOrDelete, name)>=0)
+            {
+                players.add(new Player(name, surname, patronymic, YearOfBirth, rating));
+            }
+        }
+        cursor.close();
+        return players;
     }
 
     public int NumEntries(){

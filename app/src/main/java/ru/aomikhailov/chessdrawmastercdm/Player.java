@@ -1,6 +1,11 @@
 package ru.aomikhailov.chessdrawmastercdm;
 
-public class Player {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
+public class Player implements Serializable {
 
     private String name;
     private String surname;
@@ -40,8 +45,6 @@ public class Player {
     public void setPoints(Float points) {
         this.points = points;
     }
-
-
 
 
 }

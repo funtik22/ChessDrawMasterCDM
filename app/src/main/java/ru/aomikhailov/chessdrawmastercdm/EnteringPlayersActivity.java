@@ -3,13 +3,20 @@ package ru.aomikhailov.chessdrawmastercdm;
 import android.content.Intent;
 import android.database.DatabaseUtils;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.provider.SyncStateContract;
 import android.util.SparseBooleanArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import static android.provider.SyncStateContract.*;
 
 public class EnteringPlayersActivity extends AppCompatActivity implements DialogAddPlayers.OnAsw {
 
@@ -19,9 +26,10 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
     EditText PlayersName;
     DataBasePlayersManager myDbManager;
     String [] players ;
-    ArrayList<Player> playerArrayList = new ArrayList<>();
+    List<Player> playerArrayList = new ArrayList<>();
     ArrayList<String> PlayerToAddOrDelete = new ArrayList<>();
     ImageButton DeletePlayer;
+
 
 
 
@@ -35,16 +43,18 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
         AddPlayers = findViewById(R.id.ButtonAdd);
         PlayersName = findViewById(R.id.editTextPlayerName);
         myDbManager = new DataBasePlayersManager(this);
-
+//СОЗДАНИЕ ТУРНИРА
         ButtonCreateTournament1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CreatePlayerList();
                 Intent intent = new Intent(EnteringPlayersActivity.this, TournamentActivity.class);
+                intent.putExtra(Constants.PLAYER_LIST_NAME, (Serializable) playerArrayList);
                 startActivity(intent);
             }
         });
 
-
+//ДОБАВЛЕНИЕ ИГРОКОВ
         AddPlayers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,15 +82,12 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
                 myDbManager.openDb();
                 for(int i = 0; i<PlayerToAddOrDelete.size(); i++){
                    myDbManager.delete(PlayerToAddOrDelete.get(i));
-
                 }
-               // CreateAdapter();
                 CreateAdapter2();
                 PlayerToAddOrDelete.clear();
                 myDbManager.closeDb();
             }
         });
-
 
         myDbManager.openDb();
         if(myDbManager.NumEntries() == 0){
@@ -95,9 +102,16 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
             }
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, players);
             ListPlayers.setAdapter(adapter);
-
         }
         myDbManager.closeDb();
+    }
+
+    public void CreatePlayerList() {
+        myDbManager.openDb();
+        Collections.sort(PlayerToAddOrDelete);
+        playerArrayList = myDbManager.getFromDbPlayers(PlayerToAddOrDelete);
+        myDbManager.closeDb();
+
     }
 
 
@@ -106,22 +120,20 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
         myDbManager.openDb();
     }
 
-
-    @Override
-    public void OnAsw(String name, String surname, String patronymic, Integer YearOfBirth) {
-        myDbManager.openDb();
-        myDbManager.insertToDb(name, surname, patronymic, YearOfBirth);
-        CreateAdapter();
-        myDbManager.closeDb();
-
-    }
-
-
-    public  void OnDestroy(){
+    public void OnDestroy(){
         super.onDestroy();
         myDbManager.closeDb();
     }
 
+
+    @Override
+    public void OnAsw(String name, String surname, String patronymic, Integer YearOfBirth, Integer rating) {
+        myDbManager.openDb();
+        myDbManager.insertToDb(name, surname, patronymic, YearOfBirth, rating);
+        CreateAdapter();
+        myDbManager.closeDb();
+
+    }
 
     public void CreateAdapter(){
         if(myDbManager.NumEntries() == 0){
