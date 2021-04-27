@@ -34,6 +34,9 @@
         <activity android:name=".TournamentActivity"
                   android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".TableActivity"
+                  android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

@@ -11,4 +11,6 @@
     <string name="e_mail">e-mail адрес</string>
     <string name="PasswordAgain">Пароль (ещё раз)</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_1000">1000</string>
+    <string name="_2004">2004</string>
 </resources>
