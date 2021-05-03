@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:tools="http://schemas.android.com/tools"
         tools:context=".TableActivity"
-        android:background="#C9C9C9C9">
+        android:background="#C9C9C9C9"
+        android:id="@+id/RelativeLayout">
 
     <ListView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:id="@+id/listview"/>
 </RelativeLayout>

@@ -12,16 +12,17 @@ public class Player implements Serializable {
     private String patronymic;
     private Integer YearOfBirth;
     private Integer rating;
-    private Float points;
+    private Double points;
     private String male;
 
     public Player(String name, String surname, String patronymic, Integer YearOfBirth,
-                  Integer rating) {
+                  Integer rating, Double points) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
         this.YearOfBirth = YearOfBirth;
         this.rating = rating;
+        this.points = points;
 
 
     }
@@ -38,13 +39,23 @@ public class Player implements Serializable {
         this.rating = rating;
     }
 
-    public Float getPoints() {
+    public Double getPoints() {
         return points;
     }
 
-    public void setPoints(Float points) {
+    public void setPoints(Double points) {
         this.points = points;
     }
 
+    public String getPatronymic() {
+        return patronymic;
+    }
 
+    public String getSurname() {
+        return surname;
+    }
+
+    public Integer getYearOfBirth() {
+        return YearOfBirth;
+    }
 }

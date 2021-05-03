@@ -58,7 +58,7 @@ public class DataBasePlayersManager {
 
             if(Collections.binarySearch(PlayerToAddOrDelete, name)>=0)
             {
-                players.add(new Player(name, surname, patronymic, YearOfBirth, rating));
+                players.add(new Player(name, surname, patronymic, YearOfBirth, rating, 0.));
             }
         }
         cursor.close();
