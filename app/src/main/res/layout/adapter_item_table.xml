@@ -10,7 +10,6 @@
             android:layout_height="wrap_content"
             android:textSize="25sp"
 
-            android:text="Артём"
             android:textColor="#000000"/>
     <TextView
             android:id="@+id/surname"
@@ -19,20 +18,18 @@
             android:textSize="24sp"
             android:textColor="@android:color/black"
 
-            android:text="Михайлов"/>
+    />
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="35dp"
             android:layout_height="match_parent" android:gravity="center">
         <TextView
-                android:text="@string/_1000"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/TextRating"
                 android:textColor="#000000"/>
         <TextView
-                android:text="@string/_2004"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/TextYearOfBirth"
                 android:textColor="#000000"/>
@@ -54,12 +51,8 @@
                 android:id="@+id/textView12"
                 android:textColor="#000000"/>
     </LinearLayout>
-    <Space
-            android:layout_width="10dp"
-            android:layout_height="match_parent"/>
     <TextView
-            android:text="0"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/number"
             android:textColor="#000000"
