@@ -50,6 +50,8 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
                 CreatePlayerList();
                 Intent intent = new Intent(EnteringPlayersActivity.this, TournamentActivity.class);
                 intent.putExtra(Constants.PLAYER_LIST_NAME, (Serializable) playerArrayList);
+
+
                 startActivity(intent);
             }
         });

@@ -21,7 +21,6 @@ Button EnterResult;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tournament);
         final List <Player> playerList = (List<Player>) getIntent().getSerializableExtra(Constants.PLAYER_LIST_NAME);
-        Tournament tournament = new Tournament(1);
         EnterResult = findViewById(R.id.EnterResultButton);
         EnterResult.setOnClickListener(new View.OnClickListener() {
             @Override
