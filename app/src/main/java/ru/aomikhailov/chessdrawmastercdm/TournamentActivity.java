@@ -14,12 +14,23 @@ import java.util.List;
 public class TournamentActivity extends AppCompatActivity {
 
 Button OpenTable;
+Button EnterResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tournament);
         final List <Player> playerList = (List<Player>) getIntent().getSerializableExtra(Constants.PLAYER_LIST_NAME);
+        Tournament tournament = new Tournament(1);
+        EnterResult = findViewById(R.id.EnterResultButton);
+        EnterResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TournamentActivity.this, EnterResultActivity.class);
+                intent.putExtra(Constants.PLAYER_LIST_NAME, (Serializable) playerList);
+                startActivity(intent);
+            }
+        });
         OpenTable = findViewById(R.id.ButtonOpenTable);
         OpenTable.setOnClickListener(new View.OnClickListener() {
             @Override

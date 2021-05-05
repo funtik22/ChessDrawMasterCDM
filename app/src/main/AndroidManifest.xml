@@ -37,6 +37,9 @@
         <activity android:name=".TableActivity"
                   android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".EnterResultActivity"
+                  android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
