@@ -29,6 +29,7 @@ public class TableActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        if(Tournament.tour==1){
        Collections.sort(playerList, new Comparator<Player>() {
            @Override
            public int compare(Player o1, Player o2) {
@@ -38,7 +39,19 @@ public class TableActivity extends AppCompatActivity {
                 else{
                return 1; }
            }
-       });
+       });}
+        else{
+            Collections.sort(playerList, new Comparator<Player>() {
+                @Override
+                public int compare(Player o1, Player o2) {
+                    if(o1.getPoints()>o2.getPoints()){
+                        return -1;
+                    }
+                    else{
+                        return 1; }
+                }
+            });
+        }
         lv =  findViewById(R.id.listview);
          MyTableAdapter adapter = new MyTableAdapter(this,R.layout.adapter_item_table, playerList);
         lv.setAdapter(adapter);

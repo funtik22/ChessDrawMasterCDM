@@ -58,4 +58,12 @@ public class Player implements Serializable {
     public Integer getYearOfBirth() {
         return YearOfBirth;
     }
+
+    public void win(){
+        this.points=this.points+1.;
+    }
+
+    public void draw() {
+        this.points=this.points+0.5;
+    }
 }
