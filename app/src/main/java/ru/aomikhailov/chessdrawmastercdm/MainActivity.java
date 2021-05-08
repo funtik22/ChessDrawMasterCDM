@@ -2,24 +2,27 @@ package ru.aomikhailov.chessdrawmastercdm;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public  class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-    ImageButton WithoutLogin ;
-    ImageButton Register;
-    ImageButton Login;
+   Button ButtonContinueWithoutLogin ;
+   Button ButtonRegister;
+   Button ButtonLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        WithoutLogin = findViewById(R.id.ButtonWithOutLogin);
-        Register = findViewById(R.id.ButtonRegister);
 
-        WithoutLogin.setOnClickListener(new View.OnClickListener() {
+        ButtonContinueWithoutLogin = findViewById(R.id.buttonContinueWithoutLogin);
+        ButtonRegister = findViewById(R.id.buttonRegister);
+        ButtonLogin = findViewById(R.id.buttonLogin);
+
+        ButtonContinueWithoutLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, StartScreenActivity.class);
@@ -27,20 +30,19 @@ public  class MainActivity extends AppCompatActivity {
             }
         });
 
-        Register.setOnClickListener(new View.OnClickListener() {
+        ButtonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
+
+        ButtonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), R.string.InWork, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
-
-
-
-    /*public void onClick(View view) {
-        Intent intent = new Intent(MainActivity.this, StartScreenActivity.class);
-        startActivity(intent);
-    }*/
 }

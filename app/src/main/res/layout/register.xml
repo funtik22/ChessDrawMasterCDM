@@ -1,78 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".RegisterActivity"
-        android:background="@drawable/registeractivity">
+        android:background="@drawable/activityregisterbackground">
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+        <TextView
+                android:text="@string/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextRegister"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:textSize="48sp"/>
         <Space
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="15"/>
-        <LinearLayout
-                android:orientation="vertical"
+                android:layout_height="60dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextLogin"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/login"
+                android:autofillHints=""/>
+        <Space
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="85">
-            <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/editTextLogin"
-                    android:layout_gravity="center" android:gravity="center"
-                    android:hint="@string/login"/>
-            <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"/>
-            <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:ems="10"
-                    android:id="@+id/editTextEmailAddress"
-                    android:gravity="center" android:layout_gravity="center"
-                    android:hint="@string/e_mail"/>
-            <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"/>
-            <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:ems="10"
-                    android:id="@+id/editTextPassword"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:hint="@string/password"/>
-            <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"/>
-            <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:ems="10"
-                    android:id="@+id/editTextTextPassword2"
-                    android:hint="@string/PasswordAgain"
-                    android:gravity="center"
-                    android:layout_gravity="center"/>
-            <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"/>
-            <ImageButton
-                    android:layout_width="315dp"
-                    android:layout_height="50dp"
-                    app:srcCompat="@drawable/zaregisterbutton"
-                    android:id="@+id/ButtonZaRegister"
-                    android:layout_gravity="center"
-                    android:foregroundGravity="center"/>
-        </LinearLayout>
+                android:layout_height="20dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/editTextEmailAddress"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:hint="@string/e_mail"
+                android:autofillHints=""/>
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editTextPassword"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:hint="@string/password"
+                android:autofillHints=""/>
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editTextTextPassword2"
+                android:hint="@string/PasswordAgain"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:autofillHints=""/>
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonRegisterNow"
+                android:background="@drawable/zaregisterbutton"/>
     </LinearLayout>
 </RelativeLayout>

@@ -19,8 +19,6 @@ public class EnterResultActivity extends AppCompatActivity {
     ListView listView;
     Button ExitButton;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
