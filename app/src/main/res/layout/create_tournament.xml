@@ -7,12 +7,12 @@
         android:layout_height="match_parent"
         tools:context=".CreateTournamentActivity"
         android:id="@+id/RelativeLayout"
-        android:background="@drawable/createtournament">
+        android:background="@drawable/activitycreatetournamentbackground">
 
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" android:gravity="center">
         <TextView
                 android:text="@string/Tournament"
                 android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
                 android:textColor="#000000"/>
         <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp"/>
+                android:layout_height="20dp"/>
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -36,13 +36,13 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2"
                     android:layout_weight="60"
-                    android:textSize="36sp"
+                    android:textSize="30sp"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:gravity="center"
                     android:layout_gravity="center"/>
             <Button
-                    android:text="@string/SwissSystem"
+                    android:text="@string/Round"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/Menubutton"
@@ -63,11 +63,11 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textView3"
                     android:layout_weight="60"
-                    android:textSize="36sp"
+                    android:textSize="30sp"
                     android:textColor="#000000"
                     android:textAlignment="center"/>
             <Button
-                    android:text="0"
+                    android:text="@string/zero"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/NumberOfPlayer"
@@ -88,12 +88,12 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textView4"
                     android:layout_weight="60"
-                    android:textSize="36sp"
+                    android:textSize="30sp"
                     android:textColor="#000000"
                     android:gravity="center"
                     android:layout_gravity="center"/>
             <Button
-                    android:text="0"
+                    android:text="@string/zero"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/NumberOfTours"
@@ -104,16 +104,9 @@
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp"/>
-        <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/horseimage"
-                android:id="@+id/imageView"/>
-        <ImageButton
-                android:layout_width="274dp"
-                android:layout_height="51dp"
-                app:srcCompat="@drawable/buttonnext"
-                android:id="@+id/Next"
-                android:layout_gravity="center"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/buttonNext"
+                android:background="@drawable/buttonnext"/>
     </LinearLayout>
 </RelativeLayout>

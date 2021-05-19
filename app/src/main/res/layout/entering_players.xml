@@ -8,7 +8,7 @@
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" android:gravity="center_horizontal">
         <TextView
                 android:text="@string/EnteringPlayers"
                 android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="gone"
-                android:text="emptyList" >
+                android:text="emptyList">
         </TextView>
         <LinearLayout
                 android:orientation="horizontal"
@@ -36,41 +36,31 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center">
-            <ImageButton
-                    android:layout_width="184dp"
-                    android:layout_height="48dp"
-                    app:srcCompat="@drawable/buttonadd"
-                    android:id="@+id/ButtonAdd"
-                    android:layout_weight="0"
-                    android:layout_gravity="center"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/buttonAddPlayers" android:layout_weight="1"
+                    android:background="@drawable/buttonadd"/>
             <Space
                     android:layout_width="20dp"
                     android:layout_height="match_parent"/>
-            <ImageButton
-                    android:layout_width="177dp"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/buttondelete"
-                    android:id="@+id/DeletePlayer"
-                    android:layout_weight="0"
-                    android:layout_gravity="center"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/buttonDeletePlayer" android:layout_weight="1"
+                    android:background="@drawable/buttondelete"/>
         </LinearLayout>
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
-        <ImageButton
-                android:layout_width="269dp"
-                android:layout_height="49dp"
-                app:srcCompat="@drawable/buttonaddbd"
-                android:id="@+id/imageButton3"
-                android:layout_gravity="center"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/buttonDownloadBD"
+                android:background="@drawable/buttondownloadbd"/>
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
-        <ImageButton
-                android:layout_width="289dp"
-                android:layout_height="48dp"
-                app:srcCompat="@drawable/buttoncreatetournament"
-                android:id="@+id/ButtonCreateTournament2"
-                android:layout_gravity="center"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/buttonCreateTournamentNow"
+                android:background="@drawable/buttoncreatetournament"/>
     </LinearLayout>
 </RelativeLayout>

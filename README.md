@@ -1,3 +1,9 @@
+Презентация: https://drive.google.com/file/d/1ifwoNStV9vDun904jxv_p8TYs0TAsPG_/view?usp=sharing
+
+Видео: https://drive.google.com/file/d/1o2_aVYYfTuolcvztvHMvFopW2WsoUXAq/view?usp=sharing
+
+
+
 1. Сделать оболочку проекта(Интерфейс, кнопки, без бэкенда) - 20%
 2. Сделать окно настройки турнира
 3. Сделать загрузку игроков в турнир

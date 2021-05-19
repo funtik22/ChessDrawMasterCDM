@@ -9,21 +9,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 public class DataBasePlayersManager {
 
     private Context context;
-    private DataBasePlayers dbPlayers;
-    private SQLiteDatabase db;
+    private DataBasePlayers DataBasePlayers;
+    private SQLiteDatabase DataBase;
 
 
     public DataBasePlayersManager(Context context){
         this.context = context;
-        dbPlayers = new DataBasePlayers(context);
+        DataBasePlayers = new DataBasePlayers(context);
     }
 
     public void openDb(){
-        db = dbPlayers.getWritableDatabase();
+        DataBase = DataBasePlayers.getWritableDatabase();
     }
 
     public void insertToDb(String name, String surname, String patronymic, Integer YearOfBirth, Integer rating){
@@ -33,12 +32,12 @@ public class DataBasePlayersManager {
         cv.put("patronymic", patronymic);
          cv.put("YearOfBirth", YearOfBirth);
         cv.put("rating", rating);
-        db.insert("playerstable", null, cv);
+        DataBase.insert("playerstable", null, cv);
     }
 
-    public List<String> getFromDb(){
+    public List<String> getNameFromDb(){
         List<String> names = new ArrayList<>();
-        Cursor cursor = db.query("playerstable", null, null, null, null, null, null);
+        Cursor cursor = DataBase.query("playerstable", null, null, null, null, null, null);
         while (cursor.moveToNext()){
             String name = cursor.getString(cursor.getColumnIndex("name"));
             names.add(name);
@@ -46,9 +45,10 @@ public class DataBasePlayersManager {
         cursor.close();
         return names;
     }
-    public List<Player> getFromDbPlayers(ArrayList <String> PlayerToAddOrDelete){
+
+    public List<Player> getFromDbPlayers(ArrayList <String> PlayerToGet){
         List<Player> players = new ArrayList<>();
-        Cursor cursor = db.query("playerstable", null, null, null, null, null, null);
+        Cursor cursor = DataBase.query("playerstable", null, null, null, null, null, null);
         while (cursor.moveToNext()){
             String name = cursor.getString(cursor.getColumnIndex("name"));
             String surname = cursor.getString(cursor.getColumnIndex("surname"));
@@ -56,7 +56,7 @@ public class DataBasePlayersManager {
             Integer YearOfBirth = cursor.getInt(cursor.getColumnIndex("YearOfBirth"));
             Integer rating = cursor.getInt(cursor.getColumnIndex("rating"));
 
-            if(Collections.binarySearch(PlayerToAddOrDelete, name)>=0)
+            if(Collections.binarySearch(PlayerToGet, name)>=0)
             {
                 players.add(new Player(name, surname, patronymic, YearOfBirth, rating, 0.));
             }
@@ -66,7 +66,7 @@ public class DataBasePlayersManager {
     }
 
     public int NumEntries(){
-        Cursor cursor = db.query("playerstable", null, null, null, null, null, null);
+        Cursor cursor = DataBase.query("playerstable", null, null, null, null, null, null);
         int k = 0;
         while (cursor.moveToNext()){
             k++;
@@ -75,13 +75,10 @@ public class DataBasePlayersManager {
     }
 
     public void delete(String name){
-        db.delete("playerstable", "name" + " = ?", new String[] { String.valueOf(name) });
+        DataBase.delete("playerstable", "name" + " = ?", new String[] { String.valueOf(name) });
     }
-
 
     public void closeDb(){
-        dbPlayers.close();
+        DataBasePlayers.close();
     }
-
-
 }

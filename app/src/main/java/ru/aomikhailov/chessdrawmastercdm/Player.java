@@ -1,8 +1,5 @@
 package ru.aomikhailov.chessdrawmastercdm;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.io.Serializable;
 
 public class Player implements Serializable {
@@ -13,7 +10,6 @@ public class Player implements Serializable {
     private Integer YearOfBirth;
     private Integer rating;
     private Double points;
-    private String male;
 
     public Player(String name, String surname, String patronymic, Integer YearOfBirth,
                   Integer rating, Double points) {
@@ -23,8 +19,6 @@ public class Player implements Serializable {
         this.YearOfBirth = YearOfBirth;
         this.rating = rating;
         this.points = points;
-
-
     }
 
     public String getName() {
@@ -35,20 +29,8 @@ public class Player implements Serializable {
         return rating;
     }
 
-    public void setRating(Integer rating) {
-        this.rating = rating;
-    }
-
     public Double getPoints() {
         return points;
-    }
-
-    public void setPoints(Double points) {
-        this.points = points;
-    }
-
-    public String getPatronymic() {
-        return patronymic;
     }
 
     public String getSurname() {
@@ -59,10 +41,12 @@ public class Player implements Serializable {
         return YearOfBirth;
     }
 
+    //This method adds one point to the player, that is, it is used if the player wins.
     public void win(){
         this.points=this.points+1.;
     }
 
+    //This method adds half a point to the player, that is, it is used in case of no result.
     public void draw() {
         this.points=this.points+0.5;
     }

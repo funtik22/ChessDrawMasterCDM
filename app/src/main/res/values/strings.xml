@@ -16,4 +16,8 @@
     <string name="Login">Вход</string>
     <string name="InWork">Данная функция находится в разработке</string>
     <string name="register">Регистрация</string>
+    <string name="zero">0</string>
+    <string name="Round">Круговой</string>
+    <string name="RoundSystem">Вы выбрали круговую систему</string>
+
 </resources>
