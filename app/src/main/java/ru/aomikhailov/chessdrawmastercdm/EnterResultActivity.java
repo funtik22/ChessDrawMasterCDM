@@ -23,6 +23,7 @@ public class EnterResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter_result);
+        getSupportActionBar().hide();
         final List<Player> playerList = (List<Player>) getIntent().getSerializableExtra(Constants.PLAYER_LIST_NAME);
         listView = findViewById(R.id.ListViewEnterResult);
         ExitButton = findViewById(R.id.buttonExit1);

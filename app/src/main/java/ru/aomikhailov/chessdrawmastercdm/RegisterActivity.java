@@ -13,7 +13,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
-
+        getSupportActionBar().hide();
         ButtonRegister = findViewById(R.id.buttonRegisterNow);
 
         ButtonRegister.setOnClickListener(new View.OnClickListener() {

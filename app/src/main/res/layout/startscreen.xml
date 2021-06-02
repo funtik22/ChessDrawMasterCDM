@@ -3,14 +3,15 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".StartScreenActivity"
         android:background="@drawable/startscreen"
         android:id="@+id/ButtonWithOutLogin">
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" android:layout_alignParentEnd="true" android:layout_marginEnd="50dp"
+            android:layout_alignParentStart="true" android:layout_marginStart="50dp">
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -25,26 +26,51 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"/>
             <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/buttonCreateTournament"
-                    android:background="@drawable/buttoncreatetournament"/>
+                    app:backgroundTint="#888888"
+                    android:text="Создать"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:typeface="monospace"
+                    android:alpha="0.87"
+                    android:textAllCaps="false"/>
             <Space
                     android:layout_width="match_parent"
                     android:layout_height="60dp"/>
             <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/buttonOpenTournament"
-                    android:background="@drawable/buttonopentournament"/>
+                    app:backgroundTint="#8AFFFFFF"
+                    android:text="Открыть"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:typeface="monospace"
+                    android:alpha="0.87"
+                    android:textAllCaps="false"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" style="@style/Widget.MaterialComponents.Button"/>
             <Space
                     android:layout_width="match_parent"
                     android:layout_height="60dp"/>
             <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/buttonSettings"
-                    android:background="@drawable/buttonsetings"/>
+                    app:backgroundTint="#8AFFFFFF"
+                    android:text="Настройки"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:typeface="monospace"
+                    android:alpha="0.87"
+                    android:textAllCaps="false"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" style="@style/Widget.MaterialComponents.Button"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

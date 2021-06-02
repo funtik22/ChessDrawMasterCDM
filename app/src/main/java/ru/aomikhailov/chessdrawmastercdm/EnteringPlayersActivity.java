@@ -34,6 +34,7 @@ public class EnteringPlayersActivity extends AppCompatActivity implements Dialog
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entering_players);
+        getSupportActionBar().hide();
         ButtonDeletePlayer = findViewById(R.id.buttonDeletePlayer);
         ButtonCreateTournament = findViewById(R.id.buttonCreateTournamentNow);
         ButtonAddPlayer = findViewById(R.id.buttonAddPlayers);

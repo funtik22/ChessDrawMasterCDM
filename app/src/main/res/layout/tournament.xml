@@ -10,13 +10,12 @@
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
+            android:layout_height="match_parent">
         <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" android:layout_gravity="center">
             <TextView
                     android:text="Тур 1"
                     android:layout_width="wrap_content"
@@ -27,62 +26,65 @@
                     android:textStyle="bold"
                     android:gravity="center"/>
         </LinearLayout>
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button2"
-                android:background="@drawable/buttondraw"/>
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="25dp"/>
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/EnterResultButton"
-                android:background="@drawable/cinresult"/>
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="25dp"/>
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/ButtonOpenTable"
-                android:background="@drawable/buttontable"/>
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="25dp"/>
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="25dp"/>
         <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center">
+                android:layout_height="match_parent"
+                android:gravity="center" android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp">
             <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button12"
-                    android:background="@drawable/buttonsave1"
-            />
+                    android:id="@+id/button2"
+                    app:backgroundTint="#8AFFFFFF"
+                    android:text="Жеребьёвка"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:typeface="monospace"
+                    android:alpha="0.87"
+                    android:textAllCaps="false"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" style="@style/Widget.MaterialComponents.Button"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
             <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button13"
-                    android:background="@drawable/buttonexit4"
-                    android:typeface="sans"/>
+                    android:id="@+id/EnterResultButton"
+                    app:backgroundTint="#888888"
+                    android:text="Результаты"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:typeface="monospace"
+                    android:alpha="0.95"
+                    android:textAllCaps="false"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ButtonOpenTable"
+                    app:backgroundTint="#888888"
+                    android:text="Таблица"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:typeface="monospace"
+                    android:alpha="0.95"
+                    android:textAllCaps="false"/>
         </LinearLayout>
     </LinearLayout>
     <ImageView
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="182dp"
             app:srcCompat="@drawable/images"
             android:id="@+id/imageView2"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="-13dp"
+            android:layout_marginBottom="-32dp"
             android:layout_marginTop="148dp"
     />
 </RelativeLayout>

@@ -7,106 +7,135 @@
         android:layout_height="match_parent"
         tools:context=".CreateTournamentActivity"
         android:id="@+id/RelativeLayout"
-        android:background="@drawable/activitycreatetournamentbackground">
+        android:background="#C8C8C8">
 
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:gravity="center">
-        <TextView
-                android:text="@string/Tournament"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView"
-                android:gravity="center"
-                android:foregroundGravity="center"
-                android:layout_gravity="center"
-                android:textSize="48sp"
-                android:textColor="#000000"/>
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="20dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:layout_alignParentEnd="true" android:layout_marginEnd="30dp"
+            android:layout_alignParentStart="true" android:layout_marginStart="30dp">
         <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <TextView
-                    android:text="@string/TypeOfTournament"
-                    android:layout_width="0dp"
+                    android:text="@string/Tournament"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView2"
-                    android:layout_weight="60"
-                    android:textSize="30sp"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
+                    android:id="@+id/textView"
                     android:gravity="center"
-                    android:layout_gravity="center"/>
-            <Button
-                    android:text="@string/Round"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Menubutton"
-                    android:layout_weight="50"
-                    android:background="@drawable/buttontypeoftournament"
-                    android:layout_gravity="center"/>
+                    android:foregroundGravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="48sp"
+                    android:textColor="#000000"/>
         </LinearLayout>
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="20dp"/>
         <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="@string/NomberOfPlayers"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView3"
-                    android:layout_weight="60"
-                    android:textSize="30sp"
-                    android:textColor="#000000"
-                    android:textAlignment="center"/>
+                android:layout_height="match_parent" android:gravity="center">
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:text="@string/TypeOfTournament"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2"
+                        android:layout_weight="60"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+                <Button
+                        android:id="@+id/Menubutton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Круговая система"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="2dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        app:icon="@drawable/baseline_more_vert_black_24dp"
+                        android:layout_weight="50" android:textColor="#000000" app:iconTint="#000000"
+                        android:textAllCaps="false"/>
+            </LinearLayout>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:gravity="center">
+                <TextView
+                        android:text="@string/NomberOfPlayers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3"
+                        android:layout_weight="60"
+                        android:textSize="24sp"
+                        android:textColor="#000000"
+                        android:textAlignment="center"/>
+                <Button
+                        android:text="@string/zero"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/NumberOfPlayer"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="2dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        app:icon="@drawable/baseline_more_vert_black_24dp"
+                        android:layout_weight="50" android:textColor="#000000" app:iconTint="#000000"
+                        android:textAllCaps="false"/>
+            </LinearLayout>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:gravity="center">
+                <TextView
+                        android:text="@string/NumberOfTours"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4"
+                        android:layout_weight="60"
+                        android:textSize="24sp"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+                <Button
+                        android:text="@string/zero"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/NumberOfTours"
+
+                        app:strokeColor="#000000"
+                        app:strokeWidth="2dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        app:icon="@drawable/baseline_more_vert_black_24dp"
+                        android:layout_weight="50" android:textColor="#000000" app:iconTint="#000000"
+                        android:textAllCaps="false"/>
+            </LinearLayout>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
             <Button
-                    android:text="@string/zero"
-                    android:layout_width="0dp"
+                    android:layout_width="336dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/NumberOfPlayer"
-                    android:layout_weight="50"
-                    android:background="@drawable/buttontypeoftournament"
-                    android:layout_gravity="center"/>
-        </LinearLayout>
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="20dp"/>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="@string/NumberOfTours"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView4"
-                    android:layout_weight="60"
-                    android:textSize="30sp"
+                    android:id="@+id/buttonNext"
+                    app:backgroundTint="#888888"
+                    android:text="Продолжить"
                     android:textColor="#000000"
-                    android:gravity="center"
-                    android:layout_gravity="center"/>
-            <Button
-                    android:text="@string/zero"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/NumberOfTours"
-                    android:layout_weight="50"
-                    android:background="@drawable/buttontypeoftournament"
-                    android:layout_gravity="center"/>
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:typeface="monospace"
+                    android:alpha="0.95"
+                    android:textAllCaps="false"/>
         </LinearLayout>
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp"/>
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/buttonNext"
-                android:background="@drawable/buttonnext"/>
     </LinearLayout>
 </RelativeLayout>

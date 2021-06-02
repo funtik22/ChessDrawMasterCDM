@@ -24,6 +24,7 @@ TextView Tour;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tournament);
+        getSupportActionBar().hide();
         final List <Player> playerList = (List<Player>) getIntent().getSerializableExtra(Constants.PLAYER_LIST_NAME);
         EnterResult = findViewById(R.id.EnterResultButton);
         Tour=findViewById(R.id.tourText);

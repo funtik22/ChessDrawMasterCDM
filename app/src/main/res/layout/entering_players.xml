@@ -37,30 +37,58 @@
                 android:layout_gravity="center"
                 android:gravity="center">
             <Button
+                    android:id="@+id/buttonAddPlayers"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/buttonAddPlayers" android:layout_weight="1"
-                    android:background="@drawable/buttonadd"/>
+                    android:layout_height="wrap_content"
+                    android:text="Добавить"
+                    app:icon="@drawable/baseline_add_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:textColor="#000000" app:iconTint="#19FF00"/>
             <Space
                     android:layout_width="20dp"
                     android:layout_height="match_parent"/>
             <Button
+                    android:id="@+id/buttonDeletePlayer"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/buttonDeletePlayer" android:layout_weight="1"
-                    android:background="@drawable/buttondelete"/>
+                    android:layout_height="wrap_content"
+                    android:text="Удалить"
+                    app:icon="@drawable/baseline_remove_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:textColor="#000000" app:iconTint="#FF0000"/>
         </LinearLayout>
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
         <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/buttonDownloadBD"
-                android:background="@drawable/buttondownloadbd"/>
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonDownloadDB"
+                app:backgroundTint="#8AFFFFFF"
+                android:text="БД с сайта ФШР"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:typeface="monospace"
+                android:alpha="0.87"
+                android:textAllCaps="false"
+                app:strokeColor="#000000"
+                app:strokeWidth="2dp"
+                style="@style/Widget.MaterialComponents.Button"/>
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
         <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/buttonCreateTournamentNow"
-                android:background="@drawable/buttoncreatetournament"/>
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonCreateTournamentNow"
+                app:backgroundTint="#888888"
+                android:text="Создать турнир"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:typeface="monospace"
+                android:alpha="0.95"
+                app:elevation="5dp"
+                android:textAllCaps="false"/>
     </LinearLayout>
 </RelativeLayout>

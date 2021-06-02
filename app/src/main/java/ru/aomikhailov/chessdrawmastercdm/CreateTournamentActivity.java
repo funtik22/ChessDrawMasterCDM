@@ -20,7 +20,7 @@ public class CreateTournamentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_tournament);
-
+        getSupportActionBar().hide();
         ButtonOpenMenuWithNumberOfPlayers = findViewById(R.id.NumberOfPlayer);
         ButtonOpenMenuWithTypeOfTournament = findViewById(R.id.Menubutton);
         ButtonOpenMenuWithNumberOfTour = findViewById(R.id.NumberOfTours);

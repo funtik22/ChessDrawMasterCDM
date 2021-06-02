@@ -19,6 +19,7 @@ public class TableActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.table);
+        getSupportActionBar().hide();
         final List<Player> playerList = (List<Player>) getIntent().getSerializableExtra(Constants.PLAYER_LIST_NAME);
         ButtonExit = findViewById(R.id.ExitButton);
         ButtonExit.setOnClickListener(new View.OnClickListener() {

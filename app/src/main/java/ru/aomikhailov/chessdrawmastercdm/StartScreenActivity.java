@@ -18,7 +18,7 @@ public class StartScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.startscreen);
-
+        getSupportActionBar().hide();
         ButtonCreateTournament = findViewById(R.id.buttonCreateTournament);
         ButtonOpenTournament = findViewById(R.id.buttonOpenTournament);
         ButtonSettings = findViewById(R.id.buttonSettings);

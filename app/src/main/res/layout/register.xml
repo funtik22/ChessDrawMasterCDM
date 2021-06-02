@@ -3,14 +3,15 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".RegisterActivity"
         android:background="@drawable/activityregisterbackground">
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal" android:layout_alignParentEnd="true" android:layout_marginEnd="50dp"
+            android:layout_alignParentStart="true" android:layout_marginStart="50dp">
         <TextView
                 android:text="@string/register"
                 android:layout_width="match_parent"
@@ -22,62 +23,58 @@
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="60dp"/>
-        <EditText
-                android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/editTextLogin"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/login"
-                android:autofillHints=""/>
+                app:helperTextEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                android:hint="e-mail адрес">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
-        <EditText
-                android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+                android:hint="Пароль"
+                android:id="@+id/textField1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:id="@+id/editTextEmailAddress"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:hint="@string/e_mail"
-                android:autofillHints=""/>
+                app:endIconMode="password_toggle"
+        >
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+            />
+
+        </com.google.android.material.textfield.TextInputLayout>
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
-        <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/editTextPassword"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:hint="@string/password"
-                android:autofillHints=""/>
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
-        <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/editTextTextPassword2"
-                android:hint="@string/PasswordAgain"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:autofillHints=""/>
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
         <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonRegisterNow"
-                android:background="@drawable/zaregisterbutton"/>
+                app:backgroundTint="#888888"
+                android:text="Регистрация"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:typeface="monospace"
+                android:alpha="0.95"
+                android:textAllCaps="false"/>
     </LinearLayout>
 </RelativeLayout>
