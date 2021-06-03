@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" android:gravity="center">
+              android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:gravity="center">
 
     <TextView
             android:text="TextView"
@@ -19,8 +20,15 @@
             android:layout_height="wrap_content" android:id="@+id/BlackPlayer" android:layout_weight="40"
             android:textSize="24sp" android:textAlignment="viewStart"/>
     <Button
-            android:text="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/ButtonResult"
-            android:background="@drawable/buttontypeoftournament" android:layout_weight="15"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/ButtonResult"
+
+            android:layout_weight="30"
+            app:strokeColor="#000000"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            app:icon="@drawable/baseline_more_vert_black_24dp"
+            android:textColor="#000000" app:iconTint="#000000"
+            android:textAllCaps="false"/>
 </LinearLayout>

@@ -124,6 +124,10 @@
             <Space
                     android:layout_width="match_parent"
                     android:layout_height="70dp"/>
+            <TextView
+                    android:text="*Количество игроков и туров при круговой системе вводить необязательно"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView7"/>
             <Button
                     android:layout_width="336dp"
                     android:layout_height="wrap_content"
