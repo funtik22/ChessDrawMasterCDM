@@ -2,7 +2,7 @@ Apk файл: https://drive.google.com/file/d/1X9IPU4sPsLya07mO7fWbB3PII9khgO6z/
 
 Презентация: https://drive.google.com/file/d/1ifwoNStV9vDun904jxv_p8TYs0TAsPG_/view?usp=sharing
 
-Видео: https://drive.google.com/file/d/1o2_aVYYfTuolcvztvHMvFopW2WsoUXAq/view?usp=sharing
+Видео: https://drive.google.com/file/d/1m-s66twnahQR5tHVZa1cVrU2D17uBgs6/view?usp=sharing
 
 Figma: https://www.figma.com/file/mwBhSzUYxX8HGfXPeCt0EB/CDM?node-id=143%3A304
 
