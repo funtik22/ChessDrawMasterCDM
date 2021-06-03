@@ -1,3 +1,5 @@
+Apk файл: https://drive.google.com/file/d/1X9IPU4sPsLya07mO7fWbB3PII9khgO6z/view?usp=sharing
+
 Презентация: https://drive.google.com/file/d/1ifwoNStV9vDun904jxv_p8TYs0TAsPG_/view?usp=sharing
 
 Видео: https://drive.google.com/file/d/1o2_aVYYfTuolcvztvHMvFopW2WsoUXAq/view?usp=sharing
