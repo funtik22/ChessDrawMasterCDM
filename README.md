@@ -4,6 +4,7 @@ Apk файл: https://drive.google.com/file/d/1X9IPU4sPsLya07mO7fWbB3PII9khgO6z/
 
 Видео: https://drive.google.com/file/d/1o2_aVYYfTuolcvztvHMvFopW2WsoUXAq/view?usp=sharing
 
+Figma: https://www.figma.com/file/mwBhSzUYxX8HGfXPeCt0EB/CDM?node-id=143%3A304
 
 
 1. Сделать оболочку проекта(Интерфейс, кнопки, без бэкенда) - 100%
