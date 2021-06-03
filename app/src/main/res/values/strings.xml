@@ -15,9 +15,35 @@
     <string name="_2004">2004</string>
     <string name="Login">Вход</string>
     <string name="InWork">Данная функция находится в разработке</string>
-    <string name="register">Регистрация</string>
     <string name="zero">0</string>
     <string name="Round">Круговой</string>
     <string name="RoundSystem">Вы выбрали круговую систему</string>
-
+    <string name="ZaRg">Зарегистрируйтесь!</string>
+    <string name="RgSus">Регистрация успешна!</string>
+    <string name="Warnings">Пользователь уже существует или данные некорректны</string>
+    <string name="minus">-</string>
+    <string name="gr">- г.р</string>
+    <string name="rating">- рейтинг</string>
+    <string name="roundsystem">Круговая система</string>
+    <string name="pred">*Количество игроков и туров при круговой системе вводить необязательно</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="patronymic">Отчество</string>
+    <string name="YearofBirth">Год рождения</string>
+    <string name="Rating">Рейтинг</string>
+    <string name="nexttour">Следующий тур</string>
+    <string name="delete">Удалить</string>
+    <string name="add">Добавить</string>
+    <string name="withFCR">БД с сайта ФШР</string>
+    <string name="createTournament">Создать турнир</string>
+    <string name="ob">*Обязательно подключение к интернету</string>
+    <string name="register">Регистрация</string>
+    <string name="creatwe">Создать</string>
+    <string name="open">Открыть</string>
+    <string name="settings">Настройки</string>
+    <string name="back">Назад</string>
+    <string name="draw">Жеребьёвка</string>
+    <string name="result">Результаты</string>
+    <string name="table">Таблица</string>
+    <string name="TourOne">Тур 1</string>
 </resources>

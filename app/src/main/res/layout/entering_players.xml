@@ -4,11 +4,13 @@
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".EnteringPlayersActivity" android:background="#9B9B9B">
+        tools:context=".EnteringPlayersActivity"
+        android:background="#9B9B9B">
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:gravity="center_horizontal">
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
         <TextView
                 android:text="@string/EnteringPlayers"
                 android:layout_width="wrap_content"
@@ -40,10 +42,11 @@
                     android:id="@+id/buttonAddPlayers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Добавить"
+                    android:text="@string/add"
                     app:icon="@drawable/baseline_add_black_24dp"
                     style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-                    android:textColor="#000000" app:iconTint="#19FF00"/>
+                    android:textColor="#000000"
+                    app:iconTint="#19FF00"/>
             <Space
                     android:layout_width="20dp"
                     android:layout_height="match_parent"/>
@@ -51,10 +54,11 @@
                     android:id="@+id/buttonDeletePlayer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Удалить"
+                    android:text="@string/delete"
                     app:icon="@drawable/baseline_remove_black_24dp"
                     style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-                    android:textColor="#000000" app:iconTint="#FF0000"/>
+                    android:textColor="#000000"
+                    app:iconTint="#FF0000"/>
         </LinearLayout>
         <Space
                 android:layout_width="match_parent"
@@ -64,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonDownloadDB"
                 app:backgroundTint="#8AFFFFFF"
-                android:text="БД с сайта ФШР"
+                android:text="@string/withFCR"
                 android:textColor="#000000"
                 android:textSize="30sp"
                 android:fontFamily="sans-serif-smallcaps"
@@ -82,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonCreateTournamentNow"
                 app:backgroundTint="#888888"
-                android:text="Создать турнир"
+                android:text="@string/createTournament"
                 android:textColor="#000000"
                 android:textSize="30sp"
                 android:fontFamily="sans-serif-smallcaps"

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "963670362411",
+    "project_id": "chessdrawnaster",
+    "storage_bucket": "chessdrawnaster.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963670362411:android:83e5c4fc27c4778d859d6e",
+        "android_client_info": {
+          "package_name": "ru.aomikhailov.chessdrawmastercdm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963670362411-id6ei5v65qmcenbadsbddtus4ubg613j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwn-TXuM8KGn3rZ1AjQ_Z9rOyd5Hij-yo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963670362411-id6ei5v65qmcenbadsbddtus4ubg613j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -24,34 +24,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"/>
         <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textField"
+                android:id="@+id/textFieldemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:helperTextEnabled="true"
                 app:counterEnabled="true"
                 app:counterMaxLength="20"
-                android:hint="e-mail адрес">
+                android:hint="@string/e_mail">
 
             <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
+                    android:id="@+id/email"
             />
         </com.google.android.material.textfield.TextInputLayout>
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
         <com.google.android.material.textfield.TextInputLayout
-                android:hint="Пароль"
-                android:id="@+id/textField1"
+                android:hint="@string/password"
+                android:id="@+id/textFieldpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:endIconMode="password_toggle"
+                app:helperTextEnabled="true"
+                app:counterEnabled="true"
+                app:helperText="Минимальная длина 6 символов"
+                app:counterMaxLength="20"
+
         >
             <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
+                    android:id="@+id/password"
             />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -64,12 +71,17 @@
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
+        <TextView
+                android:text="@string/ob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"/>
         <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonRegisterNow"
                 app:backgroundTint="#888888"
-                android:text="Регистрация"
+                android:text="@string/register"
                 android:textColor="#000000"
                 android:textSize="30sp"
                 android:fontFamily="sans-serif-smallcaps"

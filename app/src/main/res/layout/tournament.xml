@@ -15,9 +15,10 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center" android:layout_gravity="center">
+                android:gravity="center"
+                android:layout_gravity="center">
             <TextView
-                    android:text="Тур 1"
+                    android:text="@string/TourOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tourText"
@@ -30,14 +31,15 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center" android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
                 android:layout_marginStart="50dp">
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/button2"
                     app:backgroundTint="#8AFFFFFF"
-                    android:text="Жеребьёвка"
+                    android:text="@string/draw"
                     android:textColor="#000000"
                     android:textSize="30sp"
                     android:fontFamily="sans-serif-smallcaps"
@@ -54,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/EnterResultButton"
                     app:backgroundTint="#888888"
-                    android:text="Результаты"
+                    android:text="@string/result"
                     android:textColor="#000000"
                     android:textSize="30sp"
                     android:fontFamily="sans-serif-smallcaps"
@@ -69,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/ButtonOpenTable"
                     app:backgroundTint="#888888"
-                    android:text="Таблица"
+                    android:text="@string/table"
                     android:textColor="#000000"
                     android:textSize="30sp"
                     android:fontFamily="sans-serif-smallcaps"

@@ -10,8 +10,11 @@
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:layout_alignParentEnd="true" android:layout_marginEnd="50dp"
-            android:layout_alignParentStart="true" android:layout_marginStart="50dp">
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="50dp">
         <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -30,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/buttonCreateTournament"
                     app:backgroundTint="#888888"
-                    android:text="Создать"
+                    android:text="@string/creatwe"
                     android:textColor="#000000"
                     android:textSize="30sp"
                     android:fontFamily="sans-serif-smallcaps"
@@ -45,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/buttonOpenTournament"
                     app:backgroundTint="#8AFFFFFF"
-                    android:text="Открыть"
+                    android:text="@string/open"
                     android:textColor="#000000"
                     android:textSize="30sp"
                     android:fontFamily="sans-serif-smallcaps"
@@ -53,7 +56,8 @@
                     android:alpha="0.87"
                     android:textAllCaps="false"
                     app:strokeColor="#000000"
-                    app:strokeWidth="2dp" style="@style/Widget.MaterialComponents.Button"/>
+                    app:strokeWidth="2dp"
+                    style="@style/Widget.MaterialComponents.Button"/>
             <Space
                     android:layout_width="match_parent"
                     android:layout_height="60dp"/>
@@ -62,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/buttonSettings"
                     app:backgroundTint="#8AFFFFFF"
-                    android:text="Настройки"
+                    android:text="@string/settings"
                     android:textColor="#000000"
                     android:textSize="30sp"
                     android:fontFamily="sans-serif-smallcaps"
@@ -70,7 +74,8 @@
                     android:alpha="0.87"
                     android:textAllCaps="false"
                     app:strokeColor="#000000"
-                    app:strokeWidth="2dp" style="@style/Widget.MaterialComponents.Button"/>
+                    app:strokeWidth="2dp"
+                    style="@style/Widget.MaterialComponents.Button"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

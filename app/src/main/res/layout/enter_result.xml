@@ -3,22 +3,28 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".EnteringPlayersActivity" android:background="#C9C9C9C9">
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".EnteringPlayersActivity"
+        android:background="#C9C9C9C9">
 
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:gravity="center">
+            android:layout_height="match_parent"
+            android:gravity="center">
         <ListView
                 android:layout_width="match_parent"
-                android:layout_height="0dp" android:layout_weight="90" android:id="@+id/ListViewEnterResult">
+                android:layout_height="0dp"
+                android:layout_weight="90"
+                android:id="@+id/ListViewEnterResult">
         </ListView>
         <Button
                 android:layout_width="348dp"
-                android:layout_height="wrap_content" android:id="@+id/buttonExit1"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonExit1"
                 app:backgroundTint="#888888"
-                android:text="Следующий тур"
+                android:text="@string/nexttour"
                 android:textColor="#000000"
                 android:textSize="30sp"
                 android:fontFamily="sans-serif-smallcaps"
